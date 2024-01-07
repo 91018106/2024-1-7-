@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        #profile {
+            text-align: center;
+        }
+        #image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="profile">
+        <h2 id="studentInfo">學號: 91018106<br>姓名: 張博翔</h2>
+        <img id="image" src="image1.jpg" alt="Selfie">
+        <br>
+        <button onclick="changeTextStyle()">調整字體與顏色</button>
+        <button onclick="adjustImage()">調整大頭照</button>
+        <button onclick="changeImage()">換圖片</button>
+    </div>
+
+    <script>
+        function changeTextStyle() {
+            var studentInfo = document.getElementById("studentInfo");
+            studentInfo.style.color = "red";
+            studentInfo.style.fontFamily = "Arial, sans-serif";
+        }
+
+        function adjustImage() {
+            var image = document.getElementById("image");
+            image.style.borderRadius = "50%";
+            image.style.border = "2px solid red";
+        }
+
+        function changeImage() {
+            var image = document.getElementById("image");
+            image.src = "image2.jpg"; // 修改為生活照的路徑
+        }
+    </script>
+</body>
+</html>
